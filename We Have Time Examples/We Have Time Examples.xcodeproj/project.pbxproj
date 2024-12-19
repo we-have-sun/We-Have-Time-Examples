@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45956BF52D1435F400F8CD8C /* WeHaveTime in Frameworks */ = {isa = PBXBuildFile; productRef = 45956BF42D1435F400F8CD8C /* WeHaveTime */; };
 		45EF4B432CEB6E63001805D4 /* We_Have_Time_ExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EF4B422CEB6E63001805D4 /* We_Have_Time_ExamplesApp.swift */; };
 		45EF4B452CEB6E63001805D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EF4B442CEB6E63001805D4 /* ContentView.swift */; };
 		45EF4B472CEB6E65001805D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45EF4B462CEB6E65001805D4 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45956BF52D1435F400F8CD8C /* WeHaveTime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = "We Have Time Examples";
+			packageProductDependencies = (
+				45956BF42D1435F400F8CD8C /* WeHaveTime */,
+			);
 			productName = "We Have Time Examples";
 			productReference = 45EF4B3F2CEB6E63001805D4 /* We Have Time Examples.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 45EF4B362CEB6E63001805D4;
+			packageReferences = (
+				45956BF32D1435F400F8CD8C /* XCLocalSwiftPackageReference "We Have Time Examples/We-Have-Time/WeHaveTime" */,
+			);
 			productRefGroup = 45EF4B402CEB6E63001805D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +354,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		45956BF32D1435F400F8CD8C /* XCLocalSwiftPackageReference "We Have Time Examples/We-Have-Time/WeHaveTime" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "We Have Time Examples/We-Have-Time/WeHaveTime";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45956BF42D1435F400F8CD8C /* WeHaveTime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeHaveTime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45EF4B372CEB6E63001805D4 /* Project object */;
 }
