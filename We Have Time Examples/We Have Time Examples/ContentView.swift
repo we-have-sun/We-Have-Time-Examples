@@ -6,19 +6,11 @@
 //
 
 import SwiftUI
+import WeHaveTime
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        ProjectView()
     }
-}
-
-#Preview {
-    ContentView()
 }
