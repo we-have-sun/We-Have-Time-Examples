@@ -108,7 +108,6 @@ struct ProjectRowView: View {
                 zeroDurationTime.duration = Int64(Date().timeIntervalSince(zeroDurationTime.startDate ?? Date.now))
                 zeroDurationTime.endDate = Date.now
                 
-                
                 zeroDurationTime.isRunning = false
                 
                 project.subentries.append(zeroDurationTime)

@@ -6,7 +6,14 @@ struct ProjectView: View {
         
     @Environment(\.modelContext) private var modelContext
     
-    @Query(sort: \TimeEntry.createdAt, order: .reverse) var projects: [TimeEntry]
+    @Query(
+        filter: #Predicate<TimeEntry> { timeEntry in
+            timeEntry.parent == nil
+        },
+        sort: \TimeEntry.createdAt,
+        order: .reverse
+    ) var projects: [TimeEntry]
+
    
     @State private var navigationPath = NavigationPath()
     

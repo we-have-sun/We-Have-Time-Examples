@@ -5,7 +5,14 @@ import WeHaveTime
 
 struct Timers: View {
     @Environment(\.modelContext) var modelContext
-    @Query var projects: [TimeEntry]
+    @Query(
+        filter: #Predicate<TimeEntry> { timeEntry in
+            timeEntry.parent == nil
+        },
+        sort: \TimeEntry.createdAt,
+        order: .reverse
+    ) var projects: [TimeEntry]
+
     @StateObject private var navModel = NavigationModel()
     
     var body: some View {

@@ -12,6 +12,6 @@ struct TimerAttributes: ActivityAttributes {
         var startTime: Date
         var projectName: String
     }
-    
 }
+
 #endif
