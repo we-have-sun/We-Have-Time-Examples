@@ -35,22 +35,15 @@ struct ProjectView: View {
         }
         .toolbar {
             Button("Add Project", systemImage: "plus") {
-                let project = TimeEntry(name: "", createdAt: .now)
-                modelContext.insert(project)
                 do {
-                    try modelContext.save()
-                    navigationPath.append(project)
+                    let newProject = try DatabaseManager.createProject(modelContext: modelContext)
+                    navigationPath.append(newProject)
                 } catch {
                     print(error)
                 }
             }
             Button("Delete all", systemImage: "minus") {
-                do {
-                    try modelContext.delete(model: TimeEntry.self)
-                    try modelContext.save()
-                } catch {
-                    print("Failed to clear "    )
-                }
+                let _ = DatabaseManager.deleteAllProjects(modelContext: modelContext)
             }
         }
         }

@@ -7,14 +7,6 @@ import SwiftUI
 import SwiftData
 import WeHaveTime
 
-@Observable
-class ProjectModel {
-    var project: TimeEntry
-    init(project: TimeEntry) {
-        self.project = project
-    }
-}
-
 struct ProjectRowView: View {
     
     @Environment(\.modelContext) var modelContext

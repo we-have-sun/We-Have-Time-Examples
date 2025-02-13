@@ -1,3 +1,3 @@
 [submodule "We Have Time Examples/We Have Time Examples/We-Have-Time"]
 	path = We Have Time Examples/We Have Time Examples/We-Have-Time
-	url = https://github.com/we-have-sun/We-have-time.git
+url=git@github.com:we-have-sun/We-have-time.git
